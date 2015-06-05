@@ -1,0 +1,25 @@
+{
+  "name": "slcodegrid",
+  "version": "0.0.0",
+  "authors": [
+    "Andrey Antonov <aantonov@slcode.com>"
+    "Vitaly Slobodin <vslobodin@slcode.com>"
+  ],
+  "description": "Simple and fast directive to create grids",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "angularjs",
+    "directive",
+    "grid"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
