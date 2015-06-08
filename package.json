@@ -1,0 +1,31 @@
+{
+  "name": "slcodegrid",
+  "version": "0.0.1",
+  "description": "",
+  "main": "Gulpfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sl_vitaly@bitbucket.org/simplecode80/slcodegrid.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "grid",
+    "directive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/simplecode80/slcodegrid#readme",
+  "devDependencies": {
+    "babel": "^5.5.5",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.5.2"
+  }
+}
