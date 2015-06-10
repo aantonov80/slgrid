@@ -1,0 +1,26 @@
+<html data-ng-app="app">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div data-ng-controller="SimpleController as vm">
+        <sl-grid items="vm.data" items-per-page="3" table-class="table">
+          <sl-column>{{ $$item.name }}</sl-column>
+          <sl-column>{{ $$item.email }}</sl-column>
+          <sl-column>{{ $$item.phone }}</sl-column>
+          <sl-column>{{ $$item.company }}</sl-column>
+        </sl-grid>
+        <sl-paginator></sl-paginator>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+    <script type="text/javascript" src="../build/angular-slgrid.js"></script>
+    <script type="text/javascript" src="../build/templates.js"></script>
+    <script type="text/javascript" src="names.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
