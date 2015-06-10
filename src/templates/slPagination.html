@@ -1,0 +1,28 @@
+<div ng-show="paginator.pageCount() > 1">
+  <ul class="pagination">
+    <li data-ng-class="paginator.isFirstPage() && 'disabled'">
+      <a data-ng-click="paginator.firstPage()">
+        <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
+      </a>
+    </li>
+    <li data-ng-class="paginator.isFirstPage() && 'disabled'">
+      <a data-ng-click="paginator.previousPage()">
+        <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+      </a>
+    </li>
+    <li data-ng-repeat="i in [] | forLoop:0:paginator.pageCount()"
+        data-ng-class="paginator.page==i && 'active'">
+      <a data-ng-click="paginator.setPage(i)">{{i+1}}</a>
+    </li>
+    <li data-ng-class="paginator.isLastPage() && 'disabled'">
+      <a href="#" data-ng-click="paginator.nextPage()">
+        <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+      </a>
+    </li>
+    <li data-ng-class="paginator.isLastPage() && 'disabled'">
+      <a data-ng-click="paginator.lastPage()" >
+        <span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span>
+      </a>
+    </li>
+  </ul>
+</div>
