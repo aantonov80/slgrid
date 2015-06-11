@@ -5,7 +5,7 @@ function PaginatorService() {
   this.rowsPerPage = 10;
   this.itemCount = 0;
 
-  this.setPage = (page) => {
+  this.setPage = function(page) {
     if (page > self.pageCount()) {
       return;
     }
@@ -13,7 +13,7 @@ function PaginatorService() {
     self.page = page;
   };
 
-  this.nextPage = () => {
+  this.nextPage = function() {
     if (self.isLastPage()) {
       return;
     }
@@ -21,7 +21,7 @@ function PaginatorService() {
     self.page++;
   };
 
-  this.previousPage = () => {
+  this.previousPage = function() {
     if (self.isFirstPage()) {
       return;
     }
@@ -29,23 +29,23 @@ function PaginatorService() {
     self.page--;
   };
 
-  this.firstPage = () => {
+  this.firstPage = function() {
     self.page = 0;
   };
 
-  this.lastPage = () => {
+  this.lastPage = function() {
     self.page = self.pageCount() - 1;
   };
 
-  this.isFirstPage = () => {
+  this.isFirstPage = function() {
     return self.page === 0;
   };
 
-  this.isLastPage = () => {
+  this.isLastPage = function() {
     return self.page === self.pageCount();
   };
 
-  this.pageCount = () => {
+  this.pageCount = function() {
     return Math.ceil(parseInt(self.itemCount) / parseInt(self.rowsPerPage));
   };
 }
@@ -71,10 +71,13 @@ function PaginatorDirective($templateCache, slPaginator) {
   return {
     restrict: 'E',
     replace: true,
-    controller: ($scope, slPaginator) => {
+    controller: function($scope, slPaginator) {
       $scope.paginator = slPaginator;
     },
-    template: () => {
+    link: function($scope, $element, $attrs) {
+      $element.addClass($attrs.containerClass);
+    },
+    template: function() {
       return $templateCache.get('slPagination.html');
     }
   };

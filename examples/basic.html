@@ -6,12 +6,12 @@
   <body>
     <div data-ng-controller="SimpleController as vm">
         <sl-grid items="vm.data" items-per-page="3" table-class="table">
-          <sl-column>{{ $$item.name }}</sl-column>
-          <sl-column>{{ $$item.email }}</sl-column>
-          <sl-column>{{ $$item.phone }}</sl-column>
-          <sl-column>{{ $$item.company }}</sl-column>
+          <sl-column title="Name" field="name">{{ $$item.name }}</sl-column>
+          <sl-column title="Email" field="email">{{ $$item.email }}</sl-column>
+          <sl-column title="Phone" field="phone">{{ $$item.phone }}</sl-column>
+          <sl-column title="Company" field="company">{{ $$item.company }}</sl-column>
         </sl-grid>
-        <sl-paginator></sl-paginator>
+        <sl-paginator container-class="text-center"></sl-paginator>
     </div>
 
     <!-- scripts -->
