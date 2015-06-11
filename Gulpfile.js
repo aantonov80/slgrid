@@ -1,6 +1,5 @@
 var gulp   = require('gulp'),
     concat = require('gulp-concat'),
-    babel  = require('gulp-babel'),
     filter = require('gulp-filter'),
     watch  = require('gulp-watch'),
     addSrc = require('gulp-add-src'),
@@ -30,7 +29,6 @@ gulp.task('build', function() {
 
   return gulp.src(paths.src)
     .pipe(concat('angular-slgrid.js'))
-    .pipe(babel({blacklist: ['strict']}))
     .pipe(addSrc(paths.html))
     .pipe(htmlFilter)
     .pipe(templateCache({module: config.moduleName}))
